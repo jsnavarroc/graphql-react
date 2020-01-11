@@ -10,3 +10,8 @@
 ```
  yarn add  apollo-server graphql
 ```
+>  Configuramos Babel 
+ - Para esto simplemente creamos un archivo .babelrc y configuramos
+
+>  Creamos el archivo de prueba src/index.js
+ - En este punto lo que se hace es definir unos tipos y cremos una query
