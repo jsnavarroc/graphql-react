@@ -15,3 +15,11 @@
 
 >  Creamos el archivo de prueba src/index.js
  - En este punto lo que se hace es definir unos tipos y cremos una query
+>  Modificamos el archivo de package.json
+
+ - Establecemos un scripts que nos permita levantar la aplicacion. 
+
+```
+"start": "nodemon src/index.js --ext js --exec babel-node"
+>> yarn start
+```
