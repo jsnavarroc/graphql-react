@@ -1,4 +1,5 @@
-# Primeros pasos
+# Primeros pasos (Configurando servidor)
+## Con node, apolo y graphQL
 
 > Instalar dependencias: 
 ```
