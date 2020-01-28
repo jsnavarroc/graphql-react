@@ -1,0 +1,14 @@
+{
+    "serverProt":5000,
+    "db":{
+        "host":"localhost",
+        "dialect":"postgres",
+        "database":"prueba",
+        "username":"Johan",
+        "password":"root"
+    },
+    "security": {
+        "secretKey":"some-secret-key",
+        "expiresIn":"7d"
+    }
+}
