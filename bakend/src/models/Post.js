@@ -19,7 +19,7 @@ export default (sequelize, {BOOLEAN, STRING, TEXT, UUID, UUIDV4}) =>{
             allowNull:false,
             defaultValue:'3 min'
         },
-        body:{
+        content:{
             type:TEXT, 
             allowNull:false
         },
@@ -36,4 +36,17 @@ export default (sequelize, {BOOLEAN, STRING, TEXT, UUID, UUIDV4}) =>{
             defaultValue:false
         }
     });
+
+    Post.associate = models => {
+        Post.hasMany(models.Tag, {
+            foreignKey: {
+                name: 'postId',
+                field: 'post_id'
+            },
+            as: 'tags',
+            onDelete:'CASCADE',
+            onUpdate:'CASCADE'
+        });
+    }
+    return Post;
 }

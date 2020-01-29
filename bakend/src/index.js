@@ -1,6 +1,9 @@
 /* Dependencias */
 import { ApolloServer, makeExecutableSchema } from 'apollo-server';
 
+/* Models */
+import models from './models/index';
+
 /* Type Definitions */
 const typeDefs = `
     type Hello {
@@ -32,9 +35,14 @@ const schema = makeExecutableSchema({
 
 /* Apollo Server */
 const apolloServer = new ApolloServer ({
-    schema
+    schema,
+    context:{
+        models
+    }
 })
 
 
 /* Running Apollo Server */
-apolloServer.listen(5000).then(({url}) => console.log(`Running o ${url}`))
+models.sequelize.sync({force:true}).then(() => {
+    apolloServer.listen(5000).then(({url}) => console.log(`Running o ${url}`))
+})
