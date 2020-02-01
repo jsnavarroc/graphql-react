@@ -1,0 +1,32 @@
+""" -------------------Query--------------------------- """
+type Post {
+    id: UUID!
+    user_id:UUID!
+    title: String!
+    slug:String!
+    constent:String!
+    language:String!
+    image:String!
+    published:Boolean!
+    created_at:Datetime!
+    updated_at:Datetime!
+    tags: [Tag!]
+}
+
+type Query{
+    getPosts: [Post!]
+}
+
+""" -------------------Mutations--------------------------- """
+
+input CreatePostInput {
+    title:String!,
+    slug: String!,
+    constent:String!,
+    user_id:UUID!,
+    tags: [CreateTagsInput]
+}
+
+type Mutation{
+     createPost(input:CreatePostInput):Post!
+}

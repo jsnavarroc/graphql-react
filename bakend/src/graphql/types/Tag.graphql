@@ -1,0 +1,13 @@
+""" -------------------Query--------------------------- """
+
+type Tag {
+    id:UUID
+    name:String!
+}
+
+
+""" -------------------Mutations--------------------------- """
+
+input CreateTagsInput {
+    name:String!
+}

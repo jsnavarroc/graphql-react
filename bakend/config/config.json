@@ -8,7 +8,7 @@
         "password":"root"
     },
     "security": {
-        "secretKey":"some-secret-key",
+        "secretKey":"GR4PQLJ5N",
         "expiresIn":"7d"
     }
 }
