@@ -5,7 +5,7 @@ export default {
             return models.Post.findAll({
                 include:[{
                     model:models.Tag,
-                    use:"Tag"
+                    as: "tags"
                 }]
             })
         }
@@ -18,7 +18,7 @@ export default {
             return models.Post.create({ ...input }, {
                 include:[{
                      model: models.Tag,
-                     use: "tags"
+                     as: "tags"
                 }]
             })
         }

@@ -16,6 +16,7 @@ export default {
             })
         }
     },
+    
     Mutation:{
         createUser:(parent, args, context) =>{
             const {input} = args;

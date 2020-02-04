@@ -5,11 +5,12 @@ type Post {
     title: String!
     slug:String!
     constent:String!
+    readingTime:String!
     language:String!
     image:String!
     published:Boolean!
-    created_at:Datetime!
-    updated_at:Datetime!
+    created_at:Datatime!
+    updated_at:Datatime!
     tags: [Tag!]
 }
 

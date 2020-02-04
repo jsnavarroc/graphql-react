@@ -3,7 +3,7 @@
     "db":{
         "host":"localhost",
         "dialect":"postgres",
-        "database":"prueba",
+        "database": "primeraAPI",
         "username":"Johan",
         "password":"root"
     },

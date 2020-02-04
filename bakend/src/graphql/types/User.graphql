@@ -1,24 +1,24 @@
 """ -------------------Query--------------------------- """
 type User {
     id:UUID!
-    usename:String!    
+    username:String!    
     password:String!
     email:String!
-    privilege::String!
+    privilege:String!
     active:Boolean!
-    created_at:Datetime!
-    updated_at:Datetime!
+    createdAt:Datatime!
+    updatedAt:Datatime!
     posts:[Post!]
 }
 
 type Query {
-    getUser:[User!]
+    getUsers:[User!]
 }
 
 """ -------------------Mutations--------------------------- """
 
 input CreateUserInput {
-    usename:String!,  
+    username:String!,  
     password:String!,
     email:String!
 }
